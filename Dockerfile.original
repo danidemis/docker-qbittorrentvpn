@@ -210,7 +210,7 @@ RUN echo "deb http://deb.debian.org/debian/ bullseye non-free" > /etc/apt/source
     /var/tmp/*
 
 # Remove src_valid_mark from wg-quick
-RUN sed -i /net\.ipv4\.conf\.all\.src_valid_mark/d `which wg-quick`
+RUN sed -i /net\.ipv4\.conf\.all\.src_valid_mark/d 'which wg-quick'
 
 VOLUME /config /downloads
 
